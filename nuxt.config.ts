@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   },
   css: ["vuetify/styles", "@/assets/styles/index.scss"],
   build: {
-    transpile: ["vuetify"],
+    transpile: ["vuetify", "gsap"],
   },
   vite: {
     plugins: [
