@@ -1,4 +1,6 @@
+@import "abstarcts/variables";
+
 #__nuxt, html, body {
   height: 100%;
-  background: #000;
+  background: var(--app-bg-color);
 }

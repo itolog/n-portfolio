@@ -1,7 +1,7 @@
 <template>
   <div class="default-layout">
     <AppHeader/>
-    <main>
+    <main class="app-main">
       <slot/>
     </main>
   </div>
@@ -16,6 +16,10 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  /*background: #000;*/
+}
+
+.app-main {
+  color: white;
+  padding: 10px;
 }
 </style>
