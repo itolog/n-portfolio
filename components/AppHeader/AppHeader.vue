@@ -1,6 +1,6 @@
 <template>
   <div class="app-toolbar">
-    <h2 class="app-toolbar-title">Front-end developer</h2>
+    <h2 class="app-toolbar-title"/>
 
     <AppNavigation/>
   </div>
@@ -16,19 +16,24 @@ onMounted(() => {
   tl
     .to(".app-toolbar", {
       boxShadow: "0px -1px 18px 7px rgba(102, 201, 204, 1)",
-      duration: .8,
+      duration: 1,
       ease: "expo.out",
     })
     .from(".app-toolbar-title", {
-      duration: 1,
       opacity: 0,
-      delay: 1
+      duration: 1,
+      delay: .7
     })
-    .to(".app-toolbar-title",
+    .fromTo(".app-toolbar-title",
+      {
+        delay: .6,
+        duration: 1,
+        text: "Front-end developer"
+      },
       {
         duration: 2,
         text: "Serhii Romanichenko",
-        delay: .7
+        delay: .5
       });
 });
 
