@@ -1,4 +1,4 @@
-import {NuxtLinkProps} from "#app/components/nuxt-link";
+import { NuxtLinkProps } from "#app/components/nuxt-link";
 
 export interface NavLinks extends NuxtLinkProps {
     label: string;

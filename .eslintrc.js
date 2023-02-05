@@ -15,6 +15,8 @@ module.exports = {
   },
   plugins: ["@typescript-eslint"],
   rules: {
+    "object-curly-spacing": ["error", "always"],
+    "arrow-body-style": ["error", "always"],
     "indent": ["error", 2],
     "semi": [
       "warn",

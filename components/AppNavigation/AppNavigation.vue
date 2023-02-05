@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 
-import {navLinks} from "~/components/AppNavigation/data/links";
+import { navLinks } from "~/components/AppNavigation/data/links";
 </script>
 
 <style scoped lang="scss">
