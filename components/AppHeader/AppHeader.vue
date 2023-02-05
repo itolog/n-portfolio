@@ -7,36 +7,6 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from "vue";
-import gsap from "gsap";
-
-const tl = gsap.timeline();
-
-onMounted(() => {
-  tl
-    .to(".app-toolbar", {
-      boxShadow: "0px -1px 18px 7px rgba(102, 201, 204, 1)",
-      duration: 1,
-      ease: "expo.out",
-    })
-    .from(".app-toolbar-title", {
-      opacity: 0,
-      duration: 1,
-      delay: .7
-    })
-    .fromTo(".app-toolbar-title",
-      {
-        delay: .6,
-        duration: 1,
-        text: "Front-end developer"
-      },
-      {
-        duration: 2,
-        text: "Serhii Romanichenko",
-        delay: .5
-      });
-});
-
 
 </script>
 

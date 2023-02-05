@@ -1,7 +1,7 @@
 <template>
-  <div>
-    Contacts
-  </div>
+  <section>
+    <h1>Contacts</h1>
+  </section>
 </template>
 
 <script setup lang="ts">
