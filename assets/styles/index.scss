@@ -9,9 +9,12 @@
 
   a {
     font-size: 20px;
+    font-weight: 400;
+    cursor: none;
 
     &.router-link-active.router-link-exact-active {
       color: var(--app-active-link-color);
+      font-weight: 600;
     }
   }
 }

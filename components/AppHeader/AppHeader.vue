@@ -1,9 +1,9 @@
 <template>
-  <div class="app-toolbar">
+  <header class="app-toolbar">
     <h2 class="app-toolbar-title"/>
 
     <AppNavigation/>
-  </div>
+  </header>
 </template>
 
 <script setup lang="ts">
@@ -18,7 +18,7 @@
   height: var(--app-header-height);
   background: #000;
   transition: box-shadow .5s;
-  padding: 0 10px;
+  padding: 0 15px;
   color: #e2e2e2;
 }
 

@@ -9,9 +9,24 @@ interface Props {
 export function useCursor({ auraRef, cursorRef }: Props) {
   let mouseX = 0, mouseY = 0, posX = 0, posY = 0;
 
+  function linksHoverAnimation() {
+    const links = document.getElementsByTagName("a");
+
+    for (let i = 0; i < links.length; i++) {
+      links[i].addEventListener("mouseover", () => {
+        auraRef.value?.classList.add("active");
+        cursorRef.value?.classList.add("active");
+      });
+
+      links[i].addEventListener("mouseout", () => {
+        auraRef.value?.classList.remove("active");
+        cursorRef.value?.classList.remove("active");
+      });
+    }
+  }
+
   onMounted(() => {
-    // const links = document.getElementsByTagName("a");
-    // console.log(links);
+    linksHoverAnimation();
 
     gsap.to({}, .01, {
       repeat: -1,

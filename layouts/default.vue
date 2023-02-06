@@ -45,20 +45,22 @@ onMounted(() => {
 #cursor, #aura {
   position: absolute;
   border-radius: 100%;
-  transition: 5s cubic-bezier(.75, -1.27, .3, 2.33) transform, .2s cubic-bezier(.75, -1.27, .3, 2.33) opacity;
+  transition: .5s cubic-bezier(.75, -1.27, .3, 2.33) transform, .2s cubic-bezier(.75, -1.27, .3, 2.33) opacity;
   user-select: none;
   pointer-events: none;
   z-index: 10000;
-
-  &.hidden {
-    display: none;
-  }
 }
 
 #cursor {
   width: 8px;
   height: 8px;
   background-color: rgba(240, 248, 255, 0.5);
+  transform: scale(1);
+
+  &.active {
+    opacity: 0;
+    transform: scale(0);
+  }
 }
 
 #aura {
@@ -67,6 +69,15 @@ onMounted(() => {
   border: 1px solid rgba(240, 248, 255, 0.2);
   background-color: rgba(240, 248, 255, 0.27);
   transform: translate(5px, 5px);
+
+  &.active {
+    border: 2px solid rgba(240, 248, 255, 0.3);
+    transform: scale(1.1);
+  }
+
+  &.hidden {
+    transform: scale(.001)
+  }
 }
 
 </style>

@@ -39,7 +39,7 @@ export default defineNuxtConfig({
       "Itim": true,
       Lato: [100, 300],
       Raleway: {
-        wght: [100, 400, 500],
+        wght: [100, 400, 500, 600],
         ital: [100]
       },
     }
