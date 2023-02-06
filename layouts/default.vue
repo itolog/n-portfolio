@@ -30,6 +30,8 @@ onMounted(() => {
 </script>
 
 <style scoped lang="scss">
+@import "assets/styles/abstarcts/mixins_media";
+
 .default-layout {
   display: flex;
   flex-direction: column;
@@ -49,6 +51,10 @@ onMounted(() => {
   user-select: none;
   pointer-events: none;
   z-index: 10000;
+
+  @include tablets() {
+    display: none;
+  }
 }
 
 #cursor {
