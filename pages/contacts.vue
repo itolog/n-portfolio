@@ -5,7 +5,11 @@
 </template>
 
 <script setup lang="ts">
+import pageTransitionConfig from "~/helpers/pageTransitionConfig";
 
+definePageMeta({
+  pageTransition: pageTransitionConfig,
+});
 </script>
 
 <style scoped>
