@@ -52,7 +52,7 @@ onMounted(() => {
   pointer-events: none;
   z-index: 10000;
 
-  @include tablets() {
+  @include laptop() {
     display: none;
   }
 }
@@ -77,6 +77,8 @@ onMounted(() => {
   transform: translate(5px, 5px);
 
   &.active {
+    background: #fff;
+    mix-blend-mode: difference;
     border: 2px solid rgba(240, 248, 255, 0.3);
     transform: scale(1.1);
   }

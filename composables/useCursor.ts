@@ -7,26 +7,27 @@ interface Props {
 }
 
 export function useCursor({ auraRef, cursorRef }: Props) {
-  let mouseX = 0, mouseY = 0, posX = 0, posY = 0;
+  const mm = gsap.matchMedia();
 
-  function linksHoverAnimation() {
+  let mouseX = 0, mouseY = 0, posX = 0, posY = 0;
+  
+  const addActiveClass = () => {
+    auraRef.value?.classList.add("active");
+    cursorRef.value?.classList.add("active");
+  };
+
+  const removeActiveClass = () => {
+    auraRef.value?.classList.remove("active");
+    cursorRef.value?.classList.remove("active");
+  };
+
+  function anim() {
     const links = document.getElementsByTagName("a");
 
     for (let i = 0; i < links.length; i++) {
-      links[i].addEventListener("mouseover", () => {
-        auraRef.value?.classList.add("active");
-        cursorRef.value?.classList.add("active");
-      });
-
-      links[i].addEventListener("mouseout", () => {
-        auraRef.value?.classList.remove("active");
-        cursorRef.value?.classList.remove("active");
-      });
+      links[i].addEventListener("mouseover", addActiveClass);
+      links[i].addEventListener("mouseout", removeActiveClass);
     }
-  }
-
-  onMounted(() => {
-    linksHoverAnimation();
 
     gsap.to({}, .01, {
       repeat: -1,
@@ -49,6 +50,12 @@ export function useCursor({ auraRef, cursorRef }: Props) {
         });
       }
     });
+  }
+
+  onMounted(() => {
+    mm.add("(min-width: 992px)", () => {
+      anim();
+    });
   });
 
   function mouseCoords(e: MouseEvent) {
@@ -58,7 +65,6 @@ export function useCursor({ auraRef, cursorRef }: Props) {
     mouseX = e.pageX;
     mouseY = e.pageY;
   }
-
 
   function mouseOut() {
     auraRef.value?.classList.add("hidden");
