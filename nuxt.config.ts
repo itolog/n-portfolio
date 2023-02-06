@@ -19,14 +19,29 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+    "@nuxtjs/google-fonts",
     async (options, nuxt) => {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       nuxt.hooks.hook("vite:extendConfig", config => {
         return config?.plugins?.push(
-          vuetify()
+          vuetify(),
         );
       });
     }
-  ]
+  ],
+  googleFonts: {
+    prefetch: true,
+    preconnect: true,
+    preload: true,
+    display: "swap",
+    families: {
+      "Itim": true,
+      Lato: [100, 300],
+      Raleway: {
+        wght: [100, 400, 500],
+        ital: [100]
+      },
+    }
+  }
 });

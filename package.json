@@ -12,6 +12,7 @@
     "@fortawesome/fontawesome-free": "^6.2.1",
     "@nuxt/eslint-config": "^0.1.1",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxtjs/google-fonts": "^3.0.0-1",
     "@types/node": "^18.11.19",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@typescript-eslint/parser": "^5.50.0",

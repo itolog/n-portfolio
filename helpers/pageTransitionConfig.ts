@@ -1,8 +1,9 @@
 import gsap from "gsap";
+import { TransitionProps } from "vue";
 
 const { togglePageTransition } = usePageTransition();
 
-const pageTransition = {
+const pageTransition: TransitionProps = {
   name: "page-transition",
   mode: "out-in",
   onEnter: (el: gsap.TweenTarget, done: () => void) => {
