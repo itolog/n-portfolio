@@ -1,5 +1,5 @@
 <template>
-  <div class="default-layout" @mousemove="mouseCoords" @mouseout="mouseOut">
+  <div class="default-layout">
     <!--    <div ref="cursor" id="cursor"/>-->
     <!--    <div ref="aura" id="aura"/>-->
     <AppHeader/>
