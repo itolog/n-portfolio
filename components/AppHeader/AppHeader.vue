@@ -23,6 +23,6 @@
 }
 
 .app-toolbar-title {
-  color: #00bcd4;
+  color: var(--app-primery-text-color);
 }
 </style>

@@ -6,6 +6,7 @@
     <main class="app-main">
       <slot/>
     </main>
+    <AppFooter/>
   </div>
 </template>
 
@@ -33,8 +34,8 @@ onMounted(() => {
 @import "assets/styles/abstarcts/mixins_media";
 
 .default-layout {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   height: 100%;
 }
 
