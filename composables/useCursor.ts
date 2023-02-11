@@ -10,7 +10,7 @@ export function useCursor({ auraRef, cursorRef }: Props) {
   const mm = gsap.matchMedia();
 
   let mouseX = 0, mouseY = 0, posX = 0, posY = 0;
-  
+
   const addActiveClass = () => {
     auraRef.value?.classList.add("active");
     cursorRef.value?.classList.add("active");
@@ -25,6 +25,7 @@ export function useCursor({ auraRef, cursorRef }: Props) {
     const links = document.getElementsByTagName("a");
 
     for (let i = 0; i < links.length; i++) {
+      links[i].style.cursor = "none";
       links[i].addEventListener("mouseover", addActiveClass);
       links[i].addEventListener("mouseout", removeActiveClass);
     }
