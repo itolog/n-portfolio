@@ -1,6 +1,6 @@
 <template>
   <footer class="app-footer">
-    Footer 2
+    Footer 3
   </footer>
 </template>
 
