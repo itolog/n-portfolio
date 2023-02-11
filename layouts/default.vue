@@ -1,7 +1,7 @@
 <template>
   <div class="default-layout" @mousemove="mouseCoords" @mouseout="mouseOut">
-    <div ref="cursor" id="cursor"/>
-    <div ref="aura" id="aura"/>
+    <!--    <div ref="cursor" id="cursor"/>-->
+    <!--    <div ref="aura" id="aura"/>-->
     <AppHeader/>
     <main class="app-main">
       <slot/>
@@ -11,16 +11,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+// import { ref } from "vue";
 import { onMounted, usePageTransition } from "#imports";
 
-const cursor = ref<HTMLDivElement | null>(null);
-const aura = ref<HTMLDivElement | null>(null);
+// const cursor = ref<HTMLDivElement | null>(null);
+// const aura = ref<HTMLDivElement | null>(null);
 
-const { mouseCoords, mouseOut } = useCursor({
-  auraRef: aura,
-  cursorRef: cursor
-});
+// const { mouseCoords, mouseOut } = useCursor({
+//   auraRef: aura,
+//   cursorRef: cursor
+// });
 
 useDefaultLayoutAnimation();
 const { togglePageTransition } = usePageTransition();
